@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="scripts.js"></script>
+</head>
+<body onload="CardAdder()">
+<nav class="navbar navbar-dark bg-dark">
+    <div class="nav-item">
+        <img class="logo m-2" src="cards/evista.png">
+    </div>
+
+    <div class="nav-item m-2">
+        <label class="text-white" for="cardNumber">Deck size:</label>
+        <select class="form-select form-check-inline" id="cardNumber" >
+            <option value="3" selected>6</option>
+            <option value="4">8</option>
+            <option value="5">10</option>
+            <option value="6">12</option>
+            <option value="7">14</option>
+            <option value="8">16</option>
+            <option value="9">18</option>
+            <option value="10" >20</option>
+        </select>
+        <button class="btn btn-danger" id="newGameButton" onclick="CardAdder()">START NEW GAME</button>
+    </div>
+</nav>
+
+<div class="row text-center m-2">
+    <div class="col-md-4">
+        <h3 id="rounds" class="">Steps: 0</h3>
+    </div>
+    <div class="col-md-4">
+        <h3 id="best" class="">Best: ∞</h3>
+    </div>
+    <div class="col-md-4">
+        <h3 id="points" class="">Points: 0</h3>
+    </div>
+</div>
+
+<div class="container" id="container">
+    <div id="cardContainer">
+
+    </div>
+</div>
+</body>
+</html>
